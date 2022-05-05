@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" >
+  
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <title>Document</title>
+    <link rel="stylesheet" href="./profile.css">
+    
+</head>
+<body id="body-pd">
+    <video autoplay muted loop id="myVideo">
+        <source src="https://ak.picdn.net/shutterstock/videos/22615441/preview/stock-footage-falling-and-swirling-pink-rose-petals-or-cherry-tree-blossoms-spring-slow-motion-hd-animation.webm" type="video/mp4">
+      
+      </video>
+
+    <!-- <header class="header" id="header">
+      
+        <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i></div>
+        <div class="header_img"> <img src="https://i.imgur.com/hczKIze.jpg" alt=""> </div>
+       
+    </header> -->
+   
+  
+    <div class="l-navbar" id="nav-bar">
+        <nav class="nav">
+            <div class="">
+            <img src="data:image/jpeg;base64,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" alt="Avatar" class="avatar">
+           </div>
+            <div>  <i ></i> <span class="nav_logo-name">Meghana Naik</span>
+                <div> <i ></i> <span class="nav_logo-name1">mgn@ekl.com</span> 
+                <br>
+                <br>
+            <br>
+                <div class="nav_list"> 
+                     <a href="#homepage" class="nav_link"> <i class='bx bx-user nav_icon'></i> <span class="nav_name">Home </span> </a> 
+                     <a href="#projects" class="nav_link"> <i class='bx bx-message-square-detail nav_icon'></i> <span class="nav_name">Project</span> </a> 
+                     <a href="#contact" class="nav_link"><i class='bx bx-bookmark nav_icon'></i> <span class="nav_name">Contact</span> </a>
+                                         
+        </nav>
+    </div>
+    <div class="main" id="homepage">
+       
+        <h1 ><b>Home</b></h1>
+
+        <br>
+
+        <div class="main1">
+            Adding a sidebar menu to a website or app's user interface makes its features and options accessible. Using a bootstrap sidebar menu brings many benefits.
+            Adding a sidebar menu to a website or app's user interface makes its features and options accessible. Using a bootstrap sidebar menu brings many benefits.    
+        </div>
+    
+        
+    <div  class="sl-container">
+ 
+       
+        <div class="sl-container1">
+         
+            <h4 ><b>Skills</b></h4>
+            
+            <h5 class="border_skills">Drawing</h5>
+            <h5 class="border_skills"> listening music</h5>
+            <h5 class="border_skills">reading books</h5>
+            <br>
+            <!-- <div class="img">
+                <img src="https://previews.123rf.com/images/irwanjos/irwanjos1602/irwanjos160200013/52404087-felice-cartone-animato-ragazza.jpg" alt="" width="50" height="33">
+          </div> -->
+        </div>
+        <br>
+        <div class="sl-container1">
+         
+            <h4><b>Languages</b></h4>
+            
+            <h5 class="border_skills">HTML</h5>
+            <h5 class="border_skills"> CSS</h5>
+            <h5 class="border_skills">Java Script</h5>
+            <h5 class="border_skills">Angular</h5>
+            <h5 class="border_skills">node.js</h5>
+            <h5 class="border_skills">Python</h5>
+            <h5 class="border_skills">CProgramming</h5>
+            <h5 class="border_skills">React.js</h5>
+            
+        </div>
+
+    </div>
+
+    
+
+      
+    </div>
+
+
+
+    <div class="main" id="projects">
+        <br>
+        <h1>Projects</h1>
+        <br>
+        <div class="container" class ="floating">
+            <div class="grid12">
+              <div class="img">
+                  <img src="https://media-exp1.licdn.com/dms/image/C4E0BAQEivLCVmWlj7A/company-logo_200_200/0/1519862214872?e=2147483647&v=beta&t=3OuVC8TLXO6xo_lRZ0IzOic17EpMO0Eo6Z6vuBpcXAA" alt="" width="50" height="33">
+            </div>
+            <div class="txt">
+               <br>
+            <h4> ekLakshya.com</h4>
+            <p>
+            </div>
+        
+
+            </div>
+          
+           
+            <div class="grid12">
+                <div class="img">
+                    <img src="https://i0.wp.com/cdn-images-1.medium.com/max/800/1*35nsqVrMg1EdAG_EdZt7jQ.png?w=1180&ssl=1" alt="" width="50" height="33">
+                 </div>
+                 <div class="txt">
+                 <br>
+                 <h4> Automation</h4>
+                  </div>
+                </div>
+            </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="container">
+            <div class="grid12">
+                <div class="img">
+                    <img src="./images/dipstick.png" alt="" width="50" height="33">
+              </div>
+              <div class="txt">
+                 <br>
+              <h4> Dipstick</h4>
+              </div>
+              
+              </div>
+            
+             
+              <div class="grid12">
+                  <div class="img">
+                      <img src="https://i0.wp.com/cdn-images-1.medium.com/max/800/1*35nsqVrMg1EdAG_EdZt7jQ.png?w=1180&ssl=1" alt="" width="50" height="33">
+                   </div>
+                   <div class="txt">
+                   <br>
+                   <h4> Automation</h4>
+                    </div>
+                  </div>
+          </div>
+          
+
+    </div>
+
+
+
+
+
+
+    <div class="main" id="contact">
+        <br>
+        <h1>Contact</h1>
+        <br>
+        <form action="action_page.php">
+
+            <label class="animate" for="fname"><b>First Name</b></label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+            <br>
+            <br>
+
+            <label class="animate" for="lname"><b>Last Name</b></label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+            <br>
+            <br>
+
+        
+            <label for="lname"><b>email</b></label>
+            <input type="text" id="email" name="email" placeholder="Your email....">
+            <br>
+            <br>
+
+        
+        
+            <label for="subject"><b>Subject</b></label>
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+            <br>
+            <br>
+
+        
+            <input type="submit" value="Submit">
+        
+          </form>
+        <h5></h5>
+
+    </div>
+   
+
+
+   
+
+
+</body>
+</html>
